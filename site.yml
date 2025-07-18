@@ -6,3 +6,8 @@
       ansible.builtin.package:
         name: httpd
         state: present
+    - name: service httpd
+      service:
+        name: httpd
+        state: restarted    
+        enabled: yes
